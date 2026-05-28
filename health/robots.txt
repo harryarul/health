@@ -1,0 +1,5 @@
+# The Whole You
+User-agent: *
+Allow: /
+
+Sitemap: https://harryarul.github.io/health/sitemap.xml

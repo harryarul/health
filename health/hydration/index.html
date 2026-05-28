@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydration — The Whole You</title>
+<meta name="description" content="Every cell needs it, most of us run a little low without noticing, and the fix is delightfully easy.">
+<meta name="theme-color" content="#25A8E0">
+<link rel="canonical" href="https://harryarul.github.io/health/hydration/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harryarul.github.io/health/hydration/">
+<meta property="og:title" content="Hydration — The Whole You">
+<meta property="og:description" content="Every cell needs it, most of us run a little low without noticing, and the fix is delightfully easy.">
+<meta property="og:image" content="https://harryarul.github.io/health/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="The Whole You">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hydration — The Whole You">
+<meta name="twitter:description" content="Every cell needs it, most of us run a little low without noticing, and the fix is delightfully easy.">
+<meta name="twitter:image" content="https://harryarul.github.io/health/assets/og-image.png">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Figtree:wght@300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/health.css">
+<style>:root{--accent:#25A8E0;--accent-ink:#1690C8;--accent-soft:color-mix(in srgb,#25A8E0 13%,transparent)}</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="../"><img class="mark" src="../assets/favicon.svg" alt=""> The Whole You</a>
+  <div class="nav-links">
+    <a href="../#pillars">← All pillars</a>
+    <a class="btn btn-primary" href="../heart/">The Whole Heart</a>
+  </div>
+</nav>
+<header class="hero"><div class="wrap"><div class="hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Pillar — Hydration</span>
+      <h1>Water: the<br><span class="hl">simplest upgrade.</span></h1>
+      <p class="lead">Every cell needs it, most of us run a little low without noticing, and the fix is delightfully easy.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#tool">Try the tool</a>
+        <a class="btn btn-ghost" href="../#pillars">All pillars</a>
+      </div>
+    </div>
+    <div class="hero-art reveal"><div class="orb"></div>
+      <div class="glyph" style="font-size:clamp(4rem,12vw,7rem);filter:drop-shadow(0 16px 26px color-mix(in srgb,var(--accent) 45%,transparent))">💧</div>
+    </div>
+  </div></div></header>
+<section><div class="wrap reveal"><div class="stat-row reveal"><div class="stat"><b>~60%</b><span>of your body is water</span></div><div class="stat"><b>6–8</b><span>glasses a day, roughly</span></div><div class="stat"><b>Pale</b><span>= well hydrated</span></div></div></div></section>
+<section><div class="wrap reveal"><div class="section-head"><span class="eyebrow">Pillar — Hydration</span><h2>Why water is the easy win.</h2><p>Every cell in you depends on it, most of us run a little low, and the fix is wonderfully simple.</p></div><ul class="flist"><li><span class="dot"></span><div><strong>It runs everything</strong><span>Water carries nutrients, cushions joints, regulates temperature and helps your heart pump efficiently.</span></div></li><li><span class="dot"></span><div><strong>A little low is common</strong><span>Mild dehydration is easy to miss — it can show up as tiredness, headaches or poor concentration.</span></div></li><li><span class="dot"></span><div><strong>Check the colour</strong><span>Pale, straw-coloured urine usually means you're well hydrated; dark means top up.</span></div></li><li><span class="dot"></span><div><strong>Needs vary</strong><span>Heat, exercise, illness and pregnancy raise your needs. Thirst is a useful guide — listen to it.</span></div></li></ul></div></section>
+<section><div class="wrap reveal"><div class="section-head"><span class="eyebrow">Easy wins</span><h2>Simple ways to drink more.</h2></div><div class="cardgrid"><div class="mini"><div class="ic">🥤</div><h4>Keep it visible</h4><p>A bottle on your desk or in your bag is the single best nudge to drink more.</p></div><div class="mini"><div class="ic">⏰</div><h4>Anchor to habits</h4><p>A glass with each meal, on waking, and after the bathroom adds up fast.</p></div><div class="mini"><div class="ic">🍓</div><h4>Eat your water</h4><p>Cucumber, watermelon, oranges, soups and yoghurt all top up your fluids.</p></div><div class="mini"><div class="ic">🍋</div><h4>Make it nicer</h4><p>Bored of plain water? Add lemon, mint, berries or a splash of juice.</p></div></div></div></section>
+<section id="tool"><div class="wrap reveal"><div class="section-head"><span class="eyebrow">Try it</span><h2>A friendly ballpark.</h2></div><div class="tool"><div class="ttl">Quick estimate</div><h3>Your rough daily water target</h3><p style="color:var(--ink-soft);margin-bottom:1.1rem">A common rule of thumb is about <b>30–35 ml per kg</b> of body weight from all fluids. It\u2019s an estimate, not a prescription — adjust for heat and activity.</p><div class="inputs"><label>Weight <input type="number" id="wt" placeholder="70"></label><select id="unit"><option value="kg">kg</option><option value="lb">lb</option></select><button class="btn btn-primary" onclick="waterCalc()">Estimate</button></div><div class="result" id="wt-res">Enter your weight for an estimate.</div></div><script>function waterCalc(){var w=+document.getElementById("wt").value||0;if(!w){return;}if(document.getElementById("unit").value=="lb")w=w*0.4536;var lo=Math.round(w*30/100)/10,hi=Math.round(w*35/100)/10,gl=Math.round(w*32.5/250);document.getElementById("wt-res").innerHTML="≈ "+lo+"–"+hi+" litres a day<small>That\u2019s roughly "+gl+" glasses (250 ml). Food and other drinks count too. Drink more in heat or exercise; don\u2019t force large amounts at once.</small>";}</script></div></section>
+<section><div class="wrap reveal"><div class="refs"><h3>Trusted sources</h3><p>Hydration guidance from public-health and clinical sources.</p><div class="ref-list"><a href="https://www.hsph.harvard.edu/nutritionsource/water/" target="_blank" rel="noopener">Harvard — The importance of hydration<span>How much, and where it comes from</span></a><a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256" target="_blank" rel="noopener">Mayo Clinic — Water: how much?<span>A clear clinical explainer</span></a><a href="https://www.cdc.gov/healthy-weight-growth/water-healthy-drinks/" target="_blank" rel="noopener">CDC — Water & healthier drinks<span>Practical ways to drink more water</span></a><a href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/" target="_blank" rel="noopener">NHS — Water, drinks and hydration<span>Plain-language guidance</span></a></div></div></div></section>
+<section><div class="wrap reveal"><div class="disclaimer"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>Education, not a diagnosis.</strong> This page shares general, well-established healthy-lifestyle information. It can't diagnose anyone and doesn't replace your doctor. If you have kidney, heart or liver conditions, your fluid needs may differ — follow your doctor's advice. If you have a medical condition, take medication, are pregnant, or are unsure, check with a qualified healthcare professional before making changes.</p></div></div></section>
+<section><div class="wrap reveal"><div class="section-head"><span class="eyebrow">Keep going</span><h2>Explore the other pillars</h2></div><div class="crosslinks"><a class="xlink" href="../heart/" style="--xc:#E0533B"><span class="e">❤️</span>Heart</a><a class="xlink" href="../nutrition/" style="--xc:#4FA63A"><span class="e">🥗</span>Nutrition</a><a class="xlink" href="../movement/" style="--xc:#F0852E"><span class="e">🏃</span>Movement</a><a class="xlink" href="../sleep/" style="--xc:#5566E0"><span class="e">😴</span>Sleep</a><a class="xlink" href="../mind/" style="--xc:#9159E6"><span class="e">🧠</span>Mind & Stress</a></div></div></section>
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <a class="brand" href="../index.html"><img class="mark" src="../assets/favicon.svg" alt=""> The Whole You</a>
+      <p>A calm, practical companion for whole-body health — one small habit at a time.</p>
+    </div>
+    <p class="copy">© 2026 The Whole You · Educational information only, not medical advice. Always speak with a qualified clinician about your own health.</p>
+  </div>
+</footer>
+<script src="../scripts/health.js" defer></script>
+</body>
+</html>
