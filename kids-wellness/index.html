@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids' Wellness — Sharp Mind, Strong Game | The Whole You</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1f2a37;
+    --ink-soft:#48566a;
+    --cream:#fdf8ef;
+    --cream-2:#fbf0db;
+    --card:#ffffff;
+    --focus:#1f9da6;     /* teal — brain/study */
+    --focus-bg:#e3f5f5;
+    --social:#ef6f6c;    /* coral — connection */
+    --social-bg:#fdeae8;
+    --sport:#3aa861;     /* green — energy/soccer */
+    --sport-bg:#e5f4ea;
+    --music:#f3a712;     /* amber — music */
+    --music-bg:#fdf0d6;
+    --line:#ece2cf;
+    --shadow:0 14px 34px -18px rgba(31,42,55,.34);
+    --shadow-sm:0 6px 16px -10px rgba(31,42,55,.4);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Nunito',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{font-family:'Fredoka',sans-serif;font-weight:600;line-height:1.15}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---------- SITE NAV (edit to match your site) ---------- */
+  .sitenav{
+    position:sticky;top:0;z-index:50;background:rgba(253,248,239,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  }
+  .sitenav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Fredoka';font-weight:600;font-size:1.15rem;color:var(--ink);text-decoration:none}
+  .brand .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--sport),var(--focus));display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .navlinks{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .navlinks a{
+    text-decoration:none;color:var(--ink-soft);font-weight:800;font-size:.9rem;
+    padding:8px 13px;border-radius:10px;transition:background .15s,color .15s;display:flex;align-items:center;gap:6px;
+  }
+  .navlinks a:hover{background:#fff;color:var(--ink)}
+  .navlinks a.current{background:var(--sport);color:#fff}
+  .navlinks a .nemoji{font-size:1rem}
+  /* breadcrumb */
+  .crumbs{font-size:.82rem;font-weight:700;color:var(--ink-soft);padding:14px 0 0}
+  .crumbs a{color:var(--ink-soft);text-decoration:none}
+  .crumbs a:hover{color:var(--ink);text-decoration:underline}
+  .crumbs .sep{margin:0 7px;opacity:.5}
+  .crumbs .here{color:var(--sport)}
+
+  /* ---------- HERO ---------- */
+  header{
+    position:relative;
+    padding:70px 0 84px;
+    background:
+      radial-gradient(900px 420px at 12% -10%, #ffe3a8 0%, transparent 60%),
+      radial-gradient(760px 460px at 92% 8%, #bdeef0 0%, transparent 58%),
+      radial-gradient(680px 520px at 70% 120%, #ffd6d2 0%, transparent 55%),
+      var(--cream);
+    overflow:hidden;
+  }
+  header::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(31,42,55,.045) 1px, transparent 1.4px);
+    background-size:22px 22px;pointer-events:none;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--line);
+    padding:7px 15px;border-radius:999px;font-weight:800;
+    font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink-soft);box-shadow:var(--shadow-sm);position:relative;z-index:2;
+  }
+  .badge .dot{width:9px;height:9px;border-radius:50%;background:var(--sport);box-shadow:0 0 0 4px var(--sport-bg)}
+  h1{font-size:clamp(2.4rem,6vw,4.1rem);margin:20px 0 12px;position:relative;z-index:2;letter-spacing:-.5px}
+  h1 .hl{color:var(--focus)}
+  h1 .hl2{color:var(--social)}
+  .lede{font-size:clamp(1.05rem,2.4vw,1.25rem);max-width:620px;color:var(--ink-soft);position:relative;z-index:2;font-weight:600}
+  .pillars{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;position:relative;z-index:2}
+  .pill{
+    display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);
+    padding:11px 16px;border-radius:14px;font-weight:800;box-shadow:var(--shadow-sm);font-size:.95rem;
+  }
+  .pemoji{font-size:1.3rem}
+  .pill.f{border-bottom:3px solid var(--focus)}
+  .pill.s{border-bottom:3px solid var(--social)}
+  .pill.p{border-bottom:3px solid var(--sport)}
+  .pill.m{border-bottom:3px solid var(--music)}
+
+  /* ---------- SECTION FRAME ---------- */
+  section{padding:58px 0}
+  .eyebrow{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;color:var(--social)}
+  .stitle{font-size:clamp(1.7rem,4vw,2.4rem);margin:8px 0 6px;letter-spacing:-.3px}
+  .sintro{color:var(--ink-soft);max-width:680px;font-weight:600;margin-bottom:30px}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .rhythm{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 16px;
+    box-shadow:var(--shadow-sm);position:relative;
+  }
+  .step .num{font-family:'Fredoka';font-size:1.5rem;color:var(--focus);font-weight:700}
+  .step h4{font-size:1.05rem;margin:6px 0 6px}
+  .step p{font-size:.86rem;color:var(--ink-soft);font-weight:600}
+  .step .mins{display:inline-block;margin-top:10px;font-size:.74rem;font-weight:800;background:var(--cream-2);padding:3px 9px;border-radius:8px;color:var(--ink-soft)}
+
+  /* ---------- TOOLS ---------- */
+  #tools{background:linear-gradient(180deg,#fff 0%, #fffdf8 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .tool{
+    background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
+  .tool h3{font-size:1.25rem;margin-bottom:4px}
+  .tool .sub{font-size:.85rem;color:var(--ink-soft);font-weight:600;margin-bottom:18px}
+  .tool .tag{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+  .tag.f{background:var(--focus-bg);color:var(--focus)}
+  .tag.m{background:var(--music-bg);color:#b7790a}
+
+  /* breathing */
+  .breath-stage{width:200px;height:200px;display:flex;align-items:center;justify-content:center;position:relative;margin:6px 0 14px}
+  .breath-ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--focus);opacity:.35}
+  #breathCircle{
+    width:90px;height:90px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #6fd0d6, var(--focus));
+    box-shadow:0 10px 26px -8px rgba(31,157,166,.7);
+    transition:transform .2s linear;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Fredoka';font-weight:600;font-size:1rem;
+  }
+  /* timer ring */
+  .ring-wrap{position:relative;width:190px;height:190px;margin:4px 0 14px}
+  .ring-wrap svg{transform:rotate(-90deg)}
+  .ring-time{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .ring-time .t{font-family:'Fredoka';font-size:2.5rem;font-weight:600;color:var(--ink)}
+  .ring-time .mode{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--social)}
+  /* metronome */
+  .metro-stage{display:flex;gap:12px;align-items:flex-end;height:120px;margin:10px 0 14px}
+  .metro-dot{width:24px;height:24px;border-radius:50%;background:var(--cream-2);border:2px solid var(--line);transition:all .08s}
+  .metro-dot.on{background:var(--music);border-color:var(--music);transform:scale(1.35);box-shadow:0 0 0 6px var(--music-bg)}
+  .bpm-display{font-family:'Fredoka';font-size:2.6rem;font-weight:600;color:var(--music)}
+  .bpm-display small{font-size:.95rem;color:var(--ink-soft);font-weight:700}
+  input[type=range]{width:100%;accent-color:var(--music);margin:10px 0}
+  /* memory game */
+  .mem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:300px;margin:6px 0 12px}
+  .mem-card{
+    aspect-ratio:1;border-radius:12px;border:none;background:var(--focus);
+    font-size:1.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;
+    color:transparent;transition:transform .25s,background .2s;font-family:'Fredoka';
+  }
+  .mem-card.flip{background:var(--focus-bg);color:initial;transform:rotateY(0)}
+  .mem-card.matched{background:var(--sport-bg);cursor:default;animation:pop .3s}
+  @keyframes pop{50%{transform:scale(1.12)}}
+  .mem-stat{font-weight:800;color:var(--ink-soft);font-size:.9rem}
+
+  .btn{
+    font-family:'Fredoka';font-weight:600;border:none;cursor:pointer;border-radius:12px;
+    padding:11px 22px;font-size:1rem;transition:transform .12s,box-shadow .2s;color:#fff;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn.f{background:var(--focus);box-shadow:0 8px 18px -8px var(--focus)}
+  .btn.m{background:var(--music);box-shadow:0 8px 18px -8px var(--music)}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+  /* ---------- LIBRARY ---------- */
+  .lib-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .libcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--focus)}
+  .libcard.s{border-top-color:var(--social)}
+  .libcard.p{border-top-color:var(--sport)}
+  .libcard.m{border-top-color:var(--music)}
+  .libhead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .libhead .ic{font-size:1.8rem}
+  .libcard h3{font-size:1.3rem}
+  .libcard .why{font-size:.85rem;color:var(--ink-soft);font-weight:600;font-style:italic;margin-bottom:16px}
+  .lvl{margin-bottom:13px;padding-left:14px;border-left:3px solid var(--line)}
+  .lvl .lname{font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+  .lvl.b .lname{color:var(--sport)}
+  .lvl.i .lname{color:var(--music);filter:brightness(.85)}
+  .lvl.a .lname{color:var(--social)}
+  .lvl p{font-size:.9rem;color:var(--ink)}
+
+  /* ---------- CALENDAR ---------- */
+  #plan{background:var(--cream-2)}
+  .phase-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .ptab{
+    border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 20px;
+    font-family:'Fredoka';font-weight:500;cursor:pointer;font-size:.95rem;transition:all .15s;color:var(--ink-soft);
+  }
+  .ptab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .phase-info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:22px;font-weight:600;color:var(--ink-soft);box-shadow:var(--shadow-sm)}
+  .phase-info strong{color:var(--ink)}
+  .days{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow-sm)}
+  .day.hide{display:none}
+  .dayhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .dayhead .dnum{font-family:'Fredoka';font-weight:700;font-size:1.25rem}
+  .dayhead .lvlbadge{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:999px}
+  .lb-b{background:var(--sport-bg);color:var(--sport)}
+  .lb-i{background:var(--music-bg);color:#b7790a}
+  .lb-a{background:var(--social-bg);color:var(--social)}
+  .act{display:flex;gap:11px;padding:8px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+  .act:last-child{border-bottom:none}
+  .act .ai{font-size:1.15rem;flex-shrink:0;line-height:1.5}
+  .act .atxt{font-size:.88rem}
+  .act .atxt b{font-weight:800}
+
+  /* ---------- TRACKER ---------- */
+  .track-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:14px}
+  .tcell{
+    aspect-ratio:1;border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;
+    color:var(--ink-soft);font-size:.95rem;transition:all .15s;
+  }
+  .tcell.done{background:var(--sport);border-color:var(--sport);color:#fff}
+  .tcell.done::after{content:"✓";position:absolute;font-size:1.1rem}
+  .tcell.done span{display:none}
+  .track-msg{margin-top:16px;font-weight:700;color:var(--ink-soft)}
+
+  /* ---------- VIDEO ---------- */
+  .vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .vslot{background:var(--card);border:2px dashed var(--focus);border-radius:18px;padding:26px;text-align:center;box-shadow:var(--shadow-sm)}
+  .vslot .vic{font-size:2.2rem}
+  .vslot h4{margin:8px 0 6px;font-size:1.1rem}
+  .vslot p{font-size:.84rem;color:var(--ink-soft);font-weight:600}
+  .vslot code{background:var(--cream-2);padding:2px 7px;border-radius:6px;font-size:.78rem;display:inline-block;margin-top:8px}
+
+  /* ---------- NOTE / FOOTER ---------- */
+  .note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--music);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow-sm)}
+  .note h4{font-size:1.1rem;margin-bottom:8px}
+  .note p{font-size:.9rem;color:var(--ink-soft);font-weight:600}
+  footer{background:var(--ink);color:#cdd6e2;padding:36px 0;text-align:center;font-weight:600;font-size:.86rem}
+  footer strong{color:#fff;font-family:'Fredoka';font-weight:600}
+
+  @media(max-width:860px){
+    .tools-grid,.lib-grid,.days,.vid-grid{grid-template-columns:1fr}
+    .rhythm{grid-template-columns:repeat(2,1fr)}
+    .track-grid{grid-template-columns:repeat(5,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     SITE NAVIGATION
+     👉 EDIT: change brand name, logo, and the links/labels below
+        to match your real health site and its other pillars.
+============================================================ -->
+<nav class="sitenav">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="logo">🌿</span> The Whole You</a>
+    <div class="navlinks">
+      <a href="../#pillars"><span class="nemoji">↩</span> All pillars</a>
+      <a href="../heart/"><span class="nemoji">❤️</span> Heart</a>
+      <a href="../movement/"><span class="nemoji">🏃</span> Movement</a>
+      <a href="../mind/"><span class="nemoji">🧠</span> Mind</a>
+      <a href="./" class="current"><span class="nemoji">🧒</span> Kids' Wellness</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../">Home</a><span class="sep">›</span><span class="here">Kids' Wellness</span></p>
+</div>
+
+<!-- ============ HERO ============ -->
+<header>
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span> Kids' Wellness Pillar · A 14-Day Routine · Ages 10–13</span>
+    <h1>Sharp <span class="hl">Mind</span>,<br>Strong <span class="hl2">Game</span>.</h1>
+    <p class="lede">A daily routine that trains focus for school, builds confidence with friends, and channels real energy into soccer and music — one fun step at a time.</p>
+    <div class="pillars">
+      <div class="pill f"><span class="pemoji">🧠</span> Focus &amp; Study</div>
+      <div class="pill s"><span class="pemoji">🤝</span> Social Connection</div>
+      <div class="pill p"><span class="pemoji">⚽</span> Sport &amp; Energy</div>
+      <div class="pill m"><span class="pemoji">🎵</span> Music &amp; Rhythm</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ DAILY RHYTHM ============ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How the day flows</p>
+    <h2 class="stitle">The daily rhythm — about 45 minutes</h2>
+    <p class="sintro">Every day follows the same five-part loop. Doing the <em>same shape</em> each day is what builds the habit — the activities inside get harder over the two weeks.</p>
+    <div class="rhythm">
+      <div class="step"><div class="num">1</div><h4>Brain Warm-Up</h4><p>Wake up focus with breathing + a quick mind game.</p><span class="mins">5 min</span></div>
+      <div class="step"><div class="num">2</div><h4>Power Move</h4><p>Soccer footwork &amp; cardio to burn energy and sharpen the body.</p><span class="mins">15 min</span></div>
+      <div class="step"><div class="num">3</div><h4>Rhythm Time</h4><p>Clap, drum or play — rhythm wires timing into the brain.</p><span class="mins">10 min</span></div>
+      <div class="step"><div class="num">4</div><h4>Connect Quest</h4><p>One small social mission to do during the day.</p><span class="mins">in-day</span></div>
+      <div class="step"><div class="num">5</div><h4>Wind-Down</h4><p>Slow breathing + naming one win. Calms the system.</p><span class="mins">5 min</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE TOOLS ============ -->
+<section id="tools">
+  <div class="wrap">
+    <p class="eyebrow">Use these every day</p>
+    <h2 class="stitle">Interactive coaches</h2>
+    <p class="sintro">Four built-in helpers that animate right on the page — a breathing guide, a focus timer, a rhythm metronome, and a memory game. No app to download.</p>
+    <div class="tools-grid">
+
+      <!-- Breathing -->
+      <div class="tool">
+        <span class="tag f">Brain Warm-Up &amp; Wind-Down</span>
+        <h3>Box Breathing</h3>
+        <p class="sub">Follow the circle: in · hold · out · hold</p>
+        <div class="breath-stage">
+          <div class="breath-ring"></div>
+          <div id="breathCircle">Ready</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn f" id="breathBtn">Start</button>
+        </div>
+      </div>
+
+      <!-- Focus timer -->
+      <div class="tool">
+        <span class="tag f">Study Sprint</span>
+        <h3>Focus Timer</h3>
+        <p class="sub">Focused work, then a real break</p>
+        <div class="ring-wrap">
+          <svg width="190" height="190" viewBox="0 0 190 190">
+            <circle cx="95" cy="95" r="86" fill="none" stroke="#e3f5f5" stroke-width="14"/>
+            <circle id="ringProg" cx="95" cy="95" r="86" fill="none" stroke="#1f9da6" stroke-width="14"
+                    stroke-linecap="round" stroke-dasharray="540" stroke-dashoffset="0"/>
+          </svg>
+          <div class="ring-time">
+            <span class="mode" id="timerMode">Focus</span>
+            <span class="t" id="timerText">20:00</span>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="btn f" id="timerBtn">Start</button>
+          <button class="btn ghost" id="timerReset">Reset</button>
+        </div>
+      </div>
+
+      <!-- Metronome -->
+      <div class="tool">
+        <span class="tag m">Rhythm Time</span>
+        <h3>Metronome</h3>
+        <p class="sub">Clap, tap or play along to the beat</p>
+        <div class="metro-stage" id="metroStage">
+          <div class="metro-dot"></div><div class="metro-dot"></div>
+          <div class="metro-dot"></div><div class="metro-dot"></div>
+        </div>
+        <div class="bpm-display"><span id="bpmVal">90</span> <small>BPM</small></div>
+        <input type="range" id="bpmSlider" min="50" max="160" value="90">
+        <div class="btn-row">
+          <button class="btn m" id="metroBtn">Start</button>
+        </div>
+      </div>
+
+      <!-- Memory game -->
+      <div class="tool">
+        <span class="tag f">Mind Game</span>
+        <h3>Memory Match</h3>
+        <p class="sub">Flip cards, find the pairs, train your working memory</p>
+        <div class="mem-grid" id="memGrid"></div>
+        <div class="mem-stat">Moves: <span id="memMoves">0</span> · Pairs: <span id="memPairs">0</span>/8</div>
+        <div class="btn-row" style="margin-top:12px">
+          <button class="btn f" id="memReset">New Game</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXERCISE LIBRARY ============ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The toolkit</p>
+    <h2 class="stitle">Exercise library</h2>
+    <p class="sintro">Here is every exercise the plan draws from, with a <strong style="color:var(--sport)">Beginner</strong>, <strong style="color:#b7790a">Intermediate</strong> and <strong style="color:var(--social)">Advanced</strong> version. The 14-day calendar tells you which to do each day.</p>
+    <div class="lib-grid">
+
+      <div class="libcard">
+        <div class="libhead"><span class="ic">🧠</span><h3>Focus &amp; Study</h3></div>
+        <p class="why">Attention is a muscle. Short, repeated reps grow it — and a calm body makes a focused mind.</p>
+        <div class="lvl b"><span class="lname">Beginner</span><p>Box breathing for 1 min, then stare at one object naming 5 details. Play one round of Memory Match.</p></div>
+        <div class="lvl i"><span class="lname">Intermediate</span><p>15-min Focus Timer study sprint on real homework. After, recall 3 facts out loud without looking.</p></div>
+        <div class="lvl a"><span class="lname">Advanced</span><p>25-min deep sprint + "teach-back": explain what you learned aloud as if teaching a younger kid.</p></div>
+      </div>
+
+      <div class="libcard s">
+        <div class="libhead"><span class="ic">🤝</span><h3>Social Connection</h3></div>
+        <p class="why">Confidence with people is a skill you practise, not a trait you're born with. Small daily reps add up fast.</p>
+        <div class="lvl b"><span class="lname">Beginner</span><p>Make warm eye contact and greet one person by name. Ask one "what" or "how" question and listen.</p></div>
+        <div class="lvl i"><span class="lname">Intermediate</span><p>Active listening: repeat back what a friend said in your own words. Give two genuine compliments today.</p></div>
+        <div class="lvl a"><span class="lname">Advanced</span><p>Start or lead a group game at recess, and tell a 2-minute story about your day at dinner.</p></div>
+      </div>
+
+      <div class="libcard p">
+        <div class="libhead"><span class="ic">⚽</span><h3>Sport &amp; Energy</h3></div>
+        <p class="why">Movement that crosses the body's midline (left↔right) lights up both brain sides — great for energy <em>and</em> focus.</p>
+        <div class="lvl b"><span class="lname">Beginner</span><p>30s toe-taps on the ball, jog in place, 10 ball juggles attempts, basic side-to-side shuffles.</p></div>
+        <div class="lvl i"><span class="lname">Intermediate</span><p>Dribble through 5 cones, aim for 20 juggles, 4×20m sprints, ladder/agility footwork.</p></div>
+        <div class="lvl a"><span class="lname">Advanced</span><p>Circuit: juggle → sprint → shoot, repeat 4 rounds. Finish with a 6-minute steady stamina run.</p></div>
+      </div>
+
+      <div class="libcard m">
+        <div class="libhead"><span class="ic">🎵</span><h3>Music &amp; Rhythm</h3></div>
+        <p class="why">Keeping a beat trains timing, prediction and patience — the same brain skills that help with reading and maths.</p>
+        <div class="lvl b"><span class="lname">Beginner</span><p>Clap a steady beat with the metronome at 90 BPM. Hum a favourite tune all the way through.</p></div>
+        <div class="lvl i"><span class="lname">Intermediate</span><p>Clap an off-beat rhythm, then learn a short phrase of a song on voice or any instrument.</p></div>
+        <div class="lvl a"><span class="lname">Advanced</span><p>Play or sing a full short piece, improvise 8 bars of rhythm, then perform it for one person.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14-DAY CALENDAR ============ -->
+<section id="plan">
+  <div class="wrap">
+    <p class="eyebrow">The 2-week plan</p>
+    <h2 class="stitle">Your 14-day calendar</h2>
+    <p class="sintro">The plan grows with the child. Tap a phase to see its days.</p>
+
+    <div class="phase-tabs">
+      <button class="ptab active" data-phase="b">🌱 Beginner · Days 1–4</button>
+      <button class="ptab" data-phase="i">🚀 Intermediate · Days 5–9</button>
+      <button class="ptab" data-phase="a">🏆 Advanced · Days 10–14</button>
+    </div>
+
+    <div class="phase-info" id="phaseInfo">
+      <strong>Goal of this phase:</strong> Learn each exercise and build the daily habit. Keep everything short, win every day, and make it fun.
+    </div>
+
+    <div class="days" id="daysGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TRACKER ============ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Stay on track</p>
+    <h2 class="stitle">2-week progress tracker</h2>
+    <p class="sintro">Tap a day when it's done. Watching the streak grow is part of the reward. (On your live site this can be wired to save automatically.)</p>
+    <div class="track-grid" id="trackGrid"></div>
+    <p class="track-msg" id="trackMsg">0 of 14 days complete — let's go! 🌟</p>
+  </div>
+</section>
+
+<!-- ============ VIDEO SLOTS ============ -->
+<section id="videos" style="background:var(--cream-2)">
+  <div class="wrap">
+    <p class="eyebrow">Add your own clips</p>
+    <h2 class="stitle">Animated video slots</h2>
+    <p class="sintro">Drop demonstration videos here so kids can watch and copy. Replace each box with your hosted video or a YouTube embed — paste an <code>&lt;iframe&gt;</code> where the box sits.</p>
+    <div class="vid-grid">
+      <div class="vslot"><div class="vic">🧠</div><h4>Breathing &amp; focus demo</h4><p>Show the box-breathing rhythm and a calm study setup.</p><code>replace with your &lt;iframe&gt;</code></div>
+      <div class="vslot" style="border-color:var(--sport)"><div class="vic">⚽</div><h4>Soccer footwork demo</h4><p>Toe-taps, juggling and the cone-dribble circuit.</p><code>replace with your &lt;iframe&gt;</code></div>
+      <div class="vslot" style="border-color:var(--music)"><div class="vic">🎵</div><h4>Rhythm &amp; clapping demo</h4><p>Clap-along patterns at 90 BPM and an easy song phrase.</p><code>replace with your &lt;iframe&gt;</code></div>
+      <div class="vslot" style="border-color:var(--social)"><div class="vic">🤝</div><h4>Social skills demo</h4><p>Friendly greetings, asking questions, active listening.</p><code>replace with your &lt;iframe&gt;</code></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARENT NOTE ============ -->
+<section>
+  <div class="wrap">
+    <div class="note">
+      <h4>A note for grown-ups 💛</h4>
+      <p>This is a fun wellness routine, not a medical or therapy program. Every child develops at their own pace — celebrate effort over perfection, and let your child skip or repeat days as needed. If you have ongoing concerns about attention, mood, social development, or energy, it's worth chatting with your child's doctor or a school counsellor, who can give advice tailored to your child. Always supervise physical activity and make sure your child warms up, stays hydrated, and stops if anything hurts.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>The Whole You · Kids' Wellness</strong><br>
+    A 14-day whole-kid routine — one of the everyday pillars at The Whole You.<br><br>
+    <span style="display:inline-flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:4px">
+      <a href="../" style="color:#cdd6e2">Home</a>
+      <a href="../heart/" style="color:#cdd6e2">Heart</a>
+      <a href="../nutrition/" style="color:#cdd6e2">Nutrition</a>
+      <a href="../movement/" style="color:#cdd6e2">Movement</a>
+      <a href="../sleep/" style="color:#cdd6e2">Sleep</a>
+      <a href="../mind/" style="color:#cdd6e2">Mind &amp; Stress</a>
+      <a href="../hydration/" style="color:#cdd6e2">Hydration</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+/* ---------------- BREATHING ---------------- */
+(function(){
+  const circle=document.getElementById('breathCircle');
+  const btn=document.getElementById('breathBtn');
+  let on=false, step=0, timer=null;
+  const phases=[
+    {label:'Breathe In',scale:1.9,ms:4000},
+    {label:'Hold',scale:1.9,ms:4000},
+    {label:'Breathe Out',scale:1,ms:4000},
+    {label:'Hold',scale:1,ms:4000}
+  ];
+  function run(){
+    const p=phases[step%4];
+    circle.textContent=p.label;
+    circle.style.transition='transform '+(p.ms/1000)+'s ease-in-out';
+    circle.style.transform='scale('+p.scale+')';
+    step++;
+    timer=setTimeout(run,p.ms);
+  }
+  btn.addEventListener('click',function(){
+    on=!on;
+    if(on){btn.textContent='Stop';step=0;run();}
+    else{clearTimeout(timer);circle.style.transition='transform .4s';circle.style.transform='scale(1)';circle.textContent='Ready';btn.textContent='Start';}
+  });
+})();
+
+/* ---------------- FOCUS TIMER ---------------- */
+(function(){
+  const FOCUS=20*60, BREAK=5*60, CIRC=540;
+  let mode='focus', remaining=FOCUS, running=false, iv=null;
+  const txt=document.getElementById('timerText'),
+        modeEl=document.getElementById('timerMode'),
+        ring=document.getElementById('ringProg'),
+        btn=document.getElementById('timerBtn'),
+        reset=document.getElementById('timerReset');
+  function fmt(s){const m=Math.floor(s/60),x=s%60;return m+':'+(x<10?'0':'')+x;}
+  function paint(){
+    const total=mode==='focus'?FOCUS:BREAK;
+    txt.textContent=fmt(remaining);
+    ring.setAttribute('stroke-dashoffset', CIRC*(1-remaining/total));
+    modeEl.textContent=mode==='focus'?'Focus':'Break';
+    ring.setAttribute('stroke', mode==='focus'?'#1f9da6':'#3aa861');
+  }
+  function tick(){
+    remaining--;
+    if(remaining<0){
+      mode=mode==='focus'?'break':'focus';
+      remaining=mode==='focus'?FOCUS:BREAK;
+    }
+    paint();
+  }
+  btn.addEventListener('click',function(){
+    running=!running;
+    if(running){btn.textContent='Pause';iv=setInterval(tick,1000);}
+    else{btn.textContent='Start';clearInterval(iv);}
+  });
+  reset.addEventListener('click',function(){
+    clearInterval(iv);running=false;btn.textContent='Start';mode='focus';remaining=FOCUS;paint();
+  });
+  paint();
+})();
+
+/* ---------------- METRONOME ---------------- */
+(function(){
+  const dots=[...document.querySelectorAll('#metroStage .metro-dot')];
+  const slider=document.getElementById('bpmSlider'),
+        bpmVal=document.getElementById('bpmVal'),
+        btn=document.getElementById('metroBtn');
+  let bpm=90, on=false, iv=null, beat=0, ctx=null;
+  slider.addEventListener('input',function(){bpm=+slider.value;bpmVal.textContent=bpm;if(on){restart();}});
+  function click(){
+    if(!ctx)return;
+    const o=ctx.createOscillator(), g=ctx.createGain();
+    o.frequency.value = beat%4===0?880:660;
+    g.gain.setValueAtTime(.35,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.05);
+    o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.05);
+  }
+  function step(){
+    dots.forEach(d=>d.classList.remove('on'));
+    dots[beat%4].classList.add('on');
+    click();
+    beat++;
+  }
+  function restart(){clearInterval(iv);iv=setInterval(step,60000/bpm);}
+  btn.addEventListener('click',function(){
+    on=!on;
+    if(on){
+      ctx=ctx||new (window.AudioContext||window.webkitAudioContext)();
+      if(ctx.state==='suspended')ctx.resume();
+      btn.textContent='Stop';beat=0;step();restart();
+    }else{
+      clearInterval(iv);btn.textContent='Start';dots.forEach(d=>d.classList.remove('on'));
+    }
+  });
+})();
+
+/* ---------------- MEMORY MATCH ---------------- */
+(function(){
+  const grid=document.getElementById('memGrid'),
+        movesEl=document.getElementById('memMoves'),
+        pairsEl=document.getElementById('memPairs'),
+        reset=document.getElementById('memReset');
+  const icons=['⚽','🎵','🧠','⭐','🚀','🎯','🏆','🎸'];
+  let first=null, lock=false, moves=0, pairs=0;
+  function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function build(){
+    grid.innerHTML='';moves=0;pairs=0;first=null;lock=false;
+    movesEl.textContent=0;pairsEl.textContent=0;
+    const deck=shuffle([...icons,...icons]);
+    deck.forEach(sym=>{
+      const c=document.createElement('button');
+      c.className='mem-card';c.dataset.sym=sym;c.textContent=sym;
+      c.addEventListener('click',()=>flip(c));
+      grid.appendChild(c);
+    });
+  }
+  function flip(c){
+    if(lock||c.classList.contains('flip')||c.classList.contains('matched'))return;
+    c.classList.add('flip');
+    if(!first){first=c;return;}
+    moves++;movesEl.textContent=moves;
+    if(first.dataset.sym===c.dataset.sym){
+      first.classList.add('matched');c.classList.add('matched');
+      first=null;pairs++;pairsEl.textContent=pairs;
+    }else{
+      lock=true;const a=first;first=null;
+      setTimeout(()=>{a.classList.remove('flip');c.classList.remove('flip');lock=false;},700);
+    }
+  }
+  reset.addEventListener('click',build);
+  build();
+})();
+
+/* ---------------- CALENDAR DATA + RENDER ---------------- */
+(function(){
+  const days={
+    1:{lvl:'b',acts:[['🧠','<b>Brain:</b> 1-min box breathing, then name 5 details on one object.'],['⚽','<b>Power:</b> 30s toe-taps + jog in place + try 10 juggles.'],['🎵','<b>Rhythm:</b> Clap a steady beat at 90 BPM with the metronome.'],['🤝','<b>Connect:</b> Greet one person warmly by name today.']]},
+    2:{lvl:'b',acts:[['🧠','<b>Brain:</b> Play one round of Memory Match, then 1-min breathing.'],['⚽','<b>Power:</b> Side-to-side shuffles + 10 juggles + jog.'],['🎵','<b>Rhythm:</b> Hum a favourite song start to finish on the beat.'],['🤝','<b>Connect:</b> Ask one person a "what" or "how" question.']]},
+    3:{lvl:'b',acts:[['🧠','<b>Brain:</b> Stare-and-name focus drill + Memory Match.'],['⚽','<b>Power:</b> Toe-taps, jog, and juggle practice (beat your record).'],['🎵','<b>Rhythm:</b> Clap along to two different beats (slow + fast).'],['🤝','<b>Connect:</b> Give one genuine compliment today.']]},
+    4:{lvl:'b',acts:[['🧠','<b>Brain:</b> 1-min breathing + a 5-min mini study sprint.'],['⚽','<b>Power:</b> Combine all beginner moves into one 10-min flow.'],['🎵','<b>Rhythm:</b> Hum + tap a beat with hands AND feet together.'],['🤝','<b>Connect:</b> Greet someone new and ask a question.']]},
+    5:{lvl:'i',acts:[['🧠','<b>Brain:</b> 15-min Focus Timer sprint, then recall 3 facts aloud.'],['⚽','<b>Power:</b> Dribble through 5 cones + aim for 20 juggles.'],['🎵','<b>Rhythm:</b> Clap an off-beat pattern with the metronome.'],['🤝','<b>Connect:</b> Active listening — repeat back what a friend says.']]},
+    6:{lvl:'i',acts:[['🧠','<b>Brain:</b> 15-min sprint + Memory Match for speed.'],['⚽','<b>Power:</b> 4×20m sprints + ladder/agility footwork.'],['🎵','<b>Rhythm:</b> Learn a short phrase of a song on voice/instrument.'],['🤝','<b>Connect:</b> Give two genuine compliments today.']]},
+    7:{lvl:'i',acts:[['🧠','<b>Brain:</b> Focus sprint on homework + teach 1 idea to a sibling/parent.'],['⚽','<b>Power:</b> Cone dribble + juggling + 2 short sprints.'],['🎵','<b>Rhythm:</b> Off-beat clapping, then combine beat + footwork.'],['🤝','<b>Connect:</b> Ask a follow-up question to keep a chat going.']]},
+    8:{lvl:'i',acts:[['🧠','<b>Brain:</b> 15-min sprint + name 3 facts without looking.'],['⚽','<b>Power:</b> Agility ladder + 20 juggles + side shuffles.'],['🎵','<b>Rhythm:</b> Repeat the song phrase, add a steady foot tap.'],['🤝','<b>Connect:</b> Invite someone to join an activity with you.']]},
+    9:{lvl:'i',acts:[['🧠','<b>Brain:</b> Combine: breathing → 15-min sprint → recall + Memory Match.'],['⚽','<b>Power:</b> Full intermediate flow: cones, sprints, juggles.'],['🎵','<b>Rhythm:</b> Play the full song phrase smoothly on the beat.'],['🤝','<b>Connect:</b> Repeat-back listening + one compliment.']]},
+    10:{lvl:'a',acts:[['🧠','<b>Brain:</b> 25-min deep sprint, then teach-back what you learned.'],['⚽','<b>Power:</b> Circuit: juggle → sprint → shoot, 4 rounds.'],['🎵','<b>Rhythm:</b> Play/sing a full short piece end to end.'],['🤝','<b>Connect:</b> Start or lead a group game at recess.']]},
+    11:{lvl:'a',acts:[['🧠','<b>Brain:</b> 25-min sprint + explain a topic aloud as a "mini-lesson".'],['⚽','<b>Power:</b> Circuit + finish with a 6-min steady stamina run.'],['🎵','<b>Rhythm:</b> Improvise 8 bars of rhythm freely.'],['🤝','<b>Connect:</b> Tell a 2-minute story about your day at dinner.']]},
+    12:{lvl:'a',acts:[['🧠','<b>Brain:</b> Deep sprint + self-quiz: write 3 questions, answer them.'],['⚽','<b>Power:</b> Skill circuit, push for personal-best juggles.'],['🎵','<b>Rhythm:</b> Play the piece + add your own improvised ending.'],['🤝','<b>Connect:</b> Lead a game AND give a compliment.']]},
+    13:{lvl:'a',acts:[['🧠','<b>Brain:</b> 25-min sprint + teach-back + Memory Match record attempt.'],['⚽','<b>Power:</b> Full circuit + stamina run, track how you feel.'],['🎵','<b>Rhythm:</b> Rehearse your piece — get it performance-ready.'],['🤝','<b>Connect:</b> Plan to perform your music for someone.']]},
+    14:{lvl:'a',acts:[['🧠','<b>Brain:</b> Reflect: what got easier? Do a final focused sprint.'],['⚽','<b>Power:</b> "Showcase" your best soccer moves to family.'],['🎵','<b>Rhythm:</b> 🎤 Perform your full piece for someone!'],['🤝','<b>Connect:</b> Celebrate — share one thing you\'re proud of out loud.']]}
+  };
+  const phaseInfo={
+    b:'<strong>Goal of this phase:</strong> Learn each exercise and build the daily habit. Keep everything short, win every day, and make it fun.',
+    i:'<strong>Goal of this phase:</strong> Stretch a little — longer focus sprints, harder footwork and rhythms, and braver social quests.',
+    a:'<strong>Goal of this phase:</strong> Put it all together and perform. The child now leads their own routine and shares their progress.'
+  };
+  const lvlBadge={b:['lb-b','Beginner'],i:['lb-i','Intermediate'],a:['lb-a','Advanced']};
+  const grid=document.getElementById('daysGrid'),
+        info=document.getElementById('phaseInfo'),
+        tabs=[...document.querySelectorAll('.ptab')];
+  function render(phase){
+    grid.innerHTML='';
+    info.innerHTML=phaseInfo[phase];
+    Object.keys(days).forEach(n=>{
+      const d=days[n];
+      if(d.lvl!==phase)return;
+      const [cls,name]=lvlBadge[d.lvl];
+      const card=document.createElement('div');card.className='day';
+      let html='<div class="dayhead"><span class="dnum">Day '+n+'</span><span class="lvlbadge '+cls+'">'+name+'</span></div>';
+      d.acts.forEach(a=>{html+='<div class="act"><span class="ai">'+a[0]+'</span><span class="atxt">'+a[1]+'</span></div>';});
+      card.innerHTML=html;grid.appendChild(card);
+    });
+  }
+  tabs.forEach(t=>t.addEventListener('click',function(){
+    tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');render(t.dataset.phase);
+  }));
+  render('b');
+})();
+
+/* ---------------- TRACKER ---------------- */
+(function(){
+  const grid=document.getElementById('trackGrid'), msg=document.getElementById('trackMsg');
+  let done=0;
+  for(let i=1;i<=14;i++){
+    const cell=document.createElement('button');
+    cell.className='tcell';cell.style.position='relative';
+    cell.innerHTML='<span>'+i+'</span>';
+    cell.addEventListener('click',function(){
+      cell.classList.toggle('done');
+      done=document.querySelectorAll('.tcell.done').length;
+      let m='0 of 14 days complete — let\'s go! 🌟';
+      if(done>0&&done<7)m=done+' of 14 done — nice start! 🌱';
+      else if(done>=7&&done<14)m=done+' of 14 done — over halfway, keep going! 🚀';
+      else if(done===14)m='All 14 days complete — champion! 🏆🎉';
+      msg.textContent=m;
+    });
+    grid.appendChild(cell);
+  }
+})();
+</script>
+</body>
+</html>
