@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="The Whole Heart">
-  <rect width="64" height="64" rx="15" fill="#1E3A2B"/>
-  <g transform="translate(8.5 9.5) scale(1.96)">
-    <path d="M12 21s-7-4.6-9.3-9.3C1 8 3 4.5 6.4 4.5c2 0 3.4 1.2 4.1 2.4.7-1.2 2.1-2.4 4.1-2.4 3.4 0 5.4 3.5 3.7 7.2C19 16.4 12 21 12 21z" fill="#D1543A"/>
-    <path d="M5.5 11.2h3.1l1.4-3 2 6 1.3-3h3" fill="none" stroke="#FCF8EF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
-  </g>
-</svg>
