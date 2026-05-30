@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Whole Thyroid — The Whole You</title>
+<meta name="description" content="The small gland that sets your whole metabolism. How to spot the signs of an underactive thyroid early and support it — naturally first, with your doctor alongside." />
+<meta name="theme-color" content="#12B981" />
+<link rel="icon" href="https://harryarul.github.io/health/assets/favicon.svg" />
+<link rel="canonical" href="https://harryarul.github.io/health/thyroid/" />
+<meta property="og:site_name" content="The Whole You" />
+<meta property="og:title" content="The Whole Thyroid — The Whole You" />
+<meta property="og:description" content="A calm, practical guide to supporting an underactive thyroid (Hashimoto's & hypothyroidism) — naturally first, with a clear retesting plan." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://harryarul.github.io/health/thyroid/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#12B981;
+    --green-deep:#0e9d6e;
+    --green-soft:#e6f7f0;
+    --green-tint:#f1faf6;
+    --ink:#13241c;
+    --slate:#4a5a52;
+    --muted:#6b7b72;
+    --bg:#f7faf8;
+    --card:#ffffff;
+    --line:#e2ede8;
+    --amber:#c98a1e;
+    --clay:#c2603c;
+    --shadow:0 1px 2px rgba(19,36,28,.04), 0 8px 28px rgba(19,36,28,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Figtree',system-ui,sans-serif;
+    color:var(--ink);background:var(--bg);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(900px 500px at 100% -5%, #12B98112 0%, transparent 55%);
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:var(--green-deep);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:20;backdrop-filter:saturate(140%) blur(10px);
+    background:rgba(247,250,248,.82);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:17px}
+  .brand img{width:26px;height:26px}
+  .nav-links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
+  .nav-links a{color:var(--slate)}
+  .nav-links a:hover{color:var(--green-deep);text-decoration:none}
+  .nav-links .back{color:var(--green-deep)}
+  @media(max-width:680px){.nav-links{gap:16px;font-size:14px}.nav-links .hide-sm{display:none}}
+
+  /* Hero */
+  .hero{padding:64px 0 36px;text-align:center;max-width:760px;margin:0 auto}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--green-soft);color:var(--green-deep);
+    font-weight:600;font-size:13px;padding:7px 16px;border-radius:999px;letter-spacing:.02em}
+  h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(40px,6.5vw,68px);line-height:1.04;
+    letter-spacing:-.02em;margin:22px 0 18px}
+  h1 em{font-style:italic;color:var(--green-deep)}
+  .lede{font-size:20px;color:var(--slate);line-height:1.6;max-width:60ch;margin:0 auto}
+
+  /* Stat row */
+  .stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:40px 0 8px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 24px;
+    box-shadow:var(--shadow);min-width:150px;text-align:center}
+  .stat b{font-family:'Fraunces',serif;font-size:26px;color:var(--green-deep);display:block;line-height:1}
+  .stat span{font-size:13px;color:var(--muted);display:block;margin-top:6px}
+
+  /* Section */
+  section{padding:46px 0}
+  .kicker{font-weight:700;color:var(--green-deep);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,4vw,40px);line-height:1.1;
+    letter-spacing:-.015em;margin-bottom:14px;max-width:22ch}
+  h2 em{font-style:italic;color:var(--green-deep)}
+  .sec-intro{color:var(--slate);max-width:64ch;font-size:18px}
+
+  /* Cards */
+  .grid{display:grid;gap:18px;margin-top:30px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+  .card .ico{width:44px;height:44px;border-radius:12px;background:var(--green-soft);display:flex;align-items:center;
+    justify-content:center;font-size:22px;margin-bottom:16px}
+  .card h3{font-family:'Fraunces',serif;font-weight:500;font-size:21px;margin-bottom:12px;letter-spacing:-.01em}
+  .card.warn{background:#fdf6ee;border-color:#f0dcc2}
+  .card.warn .ico{background:#f7e6cf}
+  .card.warn h3{color:var(--clay)}
+  ul.list{list-style:none}
+  ul.list li{position:relative;padding:9px 0 9px 24px;border-bottom:1px solid var(--line);color:var(--slate);font-size:15.5px}
+  ul.list li:last-child{border-bottom:none}
+  ul.list li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;border-radius:50%;
+    background:var(--green);}
+  .card.warn ul.list li::before{background:var(--clay)}
+  ul.list li b{color:var(--ink);font-weight:600}
+  .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-size:12px;font-weight:600;color:var(--green-deep);background:var(--green-soft);padding:4px 11px;border-radius:999px}
+
+  /* What it does — explainer band */
+  .band{background:var(--green-soft);border-radius:24px;padding:40px;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center}
+  .band .butterfly{font-size:64px;line-height:1}
+  .band h2{margin-bottom:10px}
+  .band p{color:var(--slate);font-size:17px}
+  @media(max-width:680px){.band{grid-template-columns:1fr;text-align:center;padding:30px}}
+
+  /* Tracker table */
+  .table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);
+    border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-top:30px}
+  .table th,.table td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:15.5px}
+  .table th{background:var(--green-tint);color:var(--green-deep);font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+  .table tr:last-child td{border-bottom:none}
+  .table td b{font-family:'Fraunces',serif;font-size:17px;color:var(--ink)}
+  .table td small{color:var(--muted);display:block;font-size:12.5px}
+
+  /* Decision tiles */
+  .signals{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .sig{border-radius:20px;padding:26px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+  .sig .badge{font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;display:inline-block;margin-bottom:14px}
+  .sig.go .badge{background:var(--green-soft);color:var(--green-deep)}
+  .sig.hold .badge{background:#fbf0d6;color:var(--amber)}
+  .sig.act .badge{background:#f7ddd1;color:var(--clay)}
+  .sig h4{font-family:'Fraunces',serif;font-weight:500;font-size:18px;margin-bottom:8px;line-height:1.25}
+  .sig p{color:var(--slate);font-size:15px}
+
+  /* Resource links */
+  .links{margin-top:26px;border-top:1px solid var(--line)}
+  .links a.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:18px 4px;
+    border-bottom:1px solid var(--line);color:var(--ink)}
+  .links a.row:hover{text-decoration:none;background:var(--green-tint)}
+  .links a.row .t{font-family:'Fraunces',serif;font-size:19px;font-weight:500}
+  .links a.row .s{font-size:13px;color:var(--muted);white-space:nowrap;font-weight:500}
+
+  /* Disclaimer */
+  .disclaimer{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);
+    border-radius:16px;padding:24px 26px;color:var(--slate);font-size:15px;margin:10px 0 0}
+  .disclaimer b{color:var(--ink)}
+
+  /* CTA band */
+  .cta{background:var(--ink);color:#eaf6f0;border-radius:24px;padding:44px;text-align:center;margin-top:10px}
+  .cta h2{color:#fff;margin:0 auto 10px;max-width:24ch}
+  .cta h2 em{color:#7be8c0}
+  .cta p{color:#bcd6cb;max-width:54ch;margin:0 auto 22px}
+  .cta a.btn{display:inline-block;background:var(--green);color:#06281c;font-weight:700;padding:13px 26px;border-radius:999px}
+  .cta a.btn:hover{background:#23cf93;text-decoration:none}
+
+  /* Footer */
+  footer.site{border-top:1px solid var(--line);margin-top:60px;padding:46px 0 60px;color:var(--muted);font-size:14px}
+  footer .brand{margin-bottom:10px}
+  footer p{max-width:60ch}
+
+  @media(max-width:760px){.g2,.g3,.signals{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="https://harryarul.github.io/health/">
+      <img src="https://harryarul.github.io/health/assets/favicon.svg" alt="" />
+      The Whole You
+    </a>
+    <nav class="nav-links">
+      <a href="https://harryarul.github.io/health/#pillars" class="hide-sm">Pillars</a>
+      <a href="https://harryarul.github.io/health/heart/" class="hide-sm">The Whole Heart</a>
+      <a href="https://harryarul.github.io/health/" class="back">← All pillars</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">🦋 Pillar · Thyroid</span>
+    <h1>Care for your <em>thyroid.</em></h1>
+    <p class="lede">A small, butterfly-shaped gland sets the pace of your whole metabolism. When it slows down, everything feels harder. Here's how to spot it early and support it — naturally first, with your doctor alongside.</p>
+    <div class="stats">
+      <div class="stat"><b>1 in 8</b><span>women affected in their lifetime</span></div>
+      <div class="stat"><b>&lt; 4.5</b><span>healthy TSH target (mIU/L)</span></div>
+      <div class="stat"><b>12 wks</b><span>before judging any change</span></div>
+    </div>
+  </section>
+
+  <!-- WHAT IT DOES -->
+  <section>
+    <div class="band">
+      <div class="butterfly">🦋</div>
+      <div>
+        <h2>What the thyroid <em>actually does.</em></h2>
+        <p>It produces hormones (T3 and T4) that tell nearly every cell how fast to work — your energy, temperature, heart rate, digestion, weight and mood all answer to it. When it underperforms, your pituitary raises a signal called <b>TSH</b> to push it harder. A high TSH with still-normal T3/T4 means your body is compensating — an early, very workable stage often caused by Hashimoto's, an autoimmune condition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNS -->
+  <section>
+    <div class="kicker">Listen to your body</div>
+    <h2>Quiet signs it may be <em>slowing down.</em></h2>
+    <p class="sec-intro">None of these alone means much — but a cluster, especially with a family history, is worth a blood test.</p>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico">🔋</div>
+        <h3>Energy & body</h3>
+        <ul class="list">
+          <li>Persistent fatigue</li>
+          <li>Feeling cold when others don't</li>
+          <li>Weight creeping up unexplained</li>
+          <li>Dry skin, thinning hair</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">🧠</div>
+        <h3>Mind & mood</h3>
+        <ul class="list">
+          <li>Brain fog, poor focus</li>
+          <li>Low mood or flatness</li>
+          <li>Sleeping a lot but unrefreshed</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">⚙️</div>
+        <h3>Inner systems</h3>
+        <ul class="list">
+          <li>Constipation</li>
+          <li>Slower heart rate</li>
+          <li>Heavier or irregular periods</li>
+          <li>Rising cholesterol</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 1 — BASELINE -->
+  <section>
+    <div class="kicker">Step 1 · Know your numbers</div>
+    <h2>Start with a <em>blood test.</em></h2>
+    <p class="sec-intro">You can't tell what's helping without a starting line. Ask your doctor for the full picture, not just TSH on its own.</p>
+    <div class="grid g2">
+      <div class="card">
+        <div class="ico">🩸</div>
+        <h3>Thyroid panel</h3>
+        <ul class="list">
+          <li><b>TSH</b> — the master signal</li>
+          <li><b>Free T4</b> — storage hormone</li>
+          <li><b>Free T3</b> — active hormone</li>
+          <li><b>Anti-TPO antibodies</b> — confirms Hashimoto's</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">🧪</div>
+        <h3>Supporting labs</h3>
+        <ul class="list">
+          <li><b>Vitamin D</b> — aim 50–80 ng/mL</li>
+          <li><b>Ferritin</b> — iron stores</li>
+          <li><b>Vitamin B12</b></li>
+          <li><b>Cholesterol panel</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2 — FOOD -->
+  <section>
+    <div class="kicker">Step 2 · Food first</div>
+    <h2>Eat to <em>calm the system.</em></h2>
+    <p class="sec-intro">An anti-inflammatory, nutrient-dense plate gives the gland what it needs and quiets the immune attack behind Hashimoto's.</p>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico">🥗</div>
+        <h3>Eat liberally</h3>
+        <ul class="list">
+          <li>Protein every meal — eggs, fish, poultry, beans</li>
+          <li>Cooked veg — sweet potato, squash, greens</li>
+          <li>Healthy fats — olive oil, avocado, nuts</li>
+          <li>Fermented foods daily for gut health</li>
+          <li>Berries & whole fruit</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">🌰</div>
+        <h3>The hero: selenium</h3>
+        <ul class="list">
+          <li><b>1–2 Brazil nuts a day</b> (~100–200 mcg)</li>
+          <li>Studies show it can lower thyroid antibodies</li>
+          <li>Never exceed 400 mcg/day</li>
+        </ul>
+        <div class="chips"><span class="chip">Good evidence</span><span class="chip">Pennies a day</span></div>
+      </div>
+      <div class="card">
+        <div class="ico">🚫</div>
+        <h3>Try removing</h3>
+        <ul class="list">
+          <li><b>Gluten</b> — fully, for 12 weeks. The biggest dietary lever in Hashimoto's.</li>
+          <li>Ultra-processed food & added sugar</li>
+          <li>Most alcohol</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3 — SUPPLEMENTS -->
+  <section>
+    <div class="kicker">Step 3 · Gentle support</div>
+    <h2>Modest doses, <em>real nutrients.</em></h2>
+    <div class="grid g2">
+      <div class="card">
+        <div class="ico">💊</div>
+        <h3>A simple daily stack</h3>
+        <ul class="list">
+          <li><b>Vitamin D3</b> 2,000–4,000 IU (with K2)</li>
+          <li><b>Magnesium glycinate</b> 200–400 mg at night</li>
+          <li><b>Zinc</b> 15–30 mg with food</li>
+          <li><b>Omega-3</b> 1–2 g</li>
+          <li><b>Probiotic</b> — multi-strain</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <div class="ico">⚠️</div>
+        <h3>Be careful with these</h3>
+        <ul class="list">
+          <li><b>Iodine, kelp, high-dose seaweed</b> — in Hashimoto's these can <em>worsen</em> the immune attack. Even Dr. Axe's own site warns high-dose iodine aggravates thyroid symptoms.</li>
+          <li><b>Desiccated thyroid (NDT)</b> — only with a doctor.</li>
+          <li><b>Megadoses of anything.</b> More isn't better.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 4 — LIFESTYLE -->
+  <section>
+    <div class="kicker">Step 4 · The quiet basics</div>
+    <h2>Sleep, calm, and <em>gentle movement.</em></h2>
+    <p class="sec-intro">Chronic stress raises cortisol, which blunts the conversion of T4 into active T3. The boring habits move the needle most.</p>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico">😴</div>
+        <h3>Sleep</h3>
+        <ul class="list">
+          <li>7–9 hours, same bedtime</li>
+          <li>Dark, cool room</li>
+          <li>Morning sunlight early</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">🚶</div>
+        <h3>Movement</h3>
+        <ul class="list">
+          <li>30+ min walking daily</li>
+          <li>Strength work 2–3×/week</li>
+          <li>Don't over-train — it backfires</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico">🧘</div>
+        <h3>Calm</h3>
+        <ul class="list">
+          <li>10 min daily — breath, prayer, journaling</li>
+          <li>Fewer doom-scroll inputs</li>
+          <li>Filtered water, cleaner products</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 5 — TRACK -->
+  <section>
+    <div class="kicker">Step 5 · Let the labs decide</div>
+    <h2>Retest on a <em>schedule.</em></h2>
+    <p class="sec-intro">Thyroid hormones shift slowly. Give your changes a full 12 weeks before judging — and let your numbers, not your feelings, make the call.</p>
+    <table class="table">
+      <thead><tr><th>When</th><th>What to check</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><b>Now</b><small>Baseline</small></td><td>Full thyroid + nutrient panel</td><td>Your starting line.</td></tr>
+        <tr><td><b>Weekly</b><small>Just notes</small></td><td>Energy, mood, sleep, weight (1–10)</td><td>Catches change before labs do.</td></tr>
+        <tr><td><b>Week 12</b><small>First retest</small></td><td>TSH, free T4, free T3, anti-TPO</td><td>Earliest real read.</td></tr>
+        <tr><td><b>Week 24</b><small>Decision point</small></td><td>Full panel + vitamin D</td><td>Confirms the direction.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- DECISION SIGNALS -->
+  <section>
+    <div class="kicker">Reading week 12</div>
+    <h2>Three honest <em>outcomes.</em></h2>
+    <div class="signals">
+      <div class="sig go">
+        <span class="badge">Keep going</span>
+        <h4>TSH falling toward 4.5, antibodies down, feeling better</h4>
+        <p>It's working. Hold steady through week 24 — don't add anything new.</p>
+      </div>
+      <div class="sig hold">
+        <span class="badge">Hold & reassess</span>
+        <h4>TSH steady, but you feel noticeably better</h4>
+        <p>Fair to continue another 12 weeks. Check you've really stuck to it, then re-decide.</p>
+      </div>
+      <div class="sig act">
+        <span class="badge">Time to act</span>
+        <h4>TSH past 10, climbing, or symptoms worse</h4>
+        <p>Lifestyle alone isn't enough here. Talk to your doctor about low-dose medication — natural and medical aren't enemies, and untreated low thyroid has real costs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEE A DOCTOR -->
+  <section>
+    <div class="kicker">Don't wait</div>
+    <h2>See your doctor <em>now</em> if…</h2>
+    <div class="grid g2">
+      <div class="card">
+        <ul class="list">
+          <li>Severe fatigue you can't push through</li>
+          <li>Big unexplained weight gain</li>
+          <li>Swelling in face, hands or legs; slow heartbeat</li>
+          <li>Depression that's deepening</li>
+        </ul>
+      </div>
+      <div class="card warn">
+        <ul class="list">
+          <li><b>Pregnant or trying to conceive</b> — untreated low thyroid is genuinely risky for the baby. Non-negotiable.</li>
+          <li>Trouble swallowing or a visible lump (goiter)</li>
+          <li>Heart racing, heat intolerance — Hashimoto's can swing the other way</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section>
+    <div class="kicker">Read more — both sides</div>
+    <h2>Trusted <em>resources.</em></h2>
+    <p class="sec-intro">A mix of natural-first and conventional voices. Where they disagree is often the most useful place to look.</p>
+    <div class="links">
+      <a class="row" href="https://draxe.com/health/thyroid-problems/" target="_blank" rel="noopener"><span class="t">Dr. Josh Axe — Thyroid Problems</span><span class="s">draxe.com</span></a>
+      <a class="row" href="https://thyroidpharmacist.com" target="_blank" rel="noopener"><span class="t">Izabella Wentz — The Thyroid Pharmacist</span><span class="s">thyroidpharmacist.com</span></a>
+      <a class="row" href="https://health.clevelandclinic.org/hypothyroidism-diet" target="_blank" rel="noopener"><span class="t">Cleveland Clinic — Hypothyroidism Diet</span><span class="s">clevelandclinic.org</span></a>
+      <a class="row" href="https://www.thyroid.org/hashimotos-thyroiditis/" target="_blank" rel="noopener"><span class="t">American Thyroid Association — Hashimoto's</span><span class="s">thyroid.org</span></a>
+      <a class="row" href="https://www.mayoclinic.org/diseases-conditions/hashimotos-disease/symptoms-causes/syc-20351855" target="_blank" rel="noopener"><span class="t">Mayo Clinic — Hashimoto's Disease</span><span class="s">mayoclinic.org</span></a>
+    </div>
+  </section>
+
+  <!-- CTA back to pillars -->
+  <section>
+    <div class="cta">
+      <h2>One gland, the <em>whole you.</em></h2>
+      <p>Your thyroid touches energy, mood, weight and sleep — the other pillars all lean on it. Tend to them together.</p>
+      <a class="btn" href="https://harryarul.github.io/health/">← Back to all pillars</a>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section style="padding-top:0">
+    <div class="disclaimer">
+      <b>Education, not a diagnosis.</b> This page shares general, well-established information about thyroid health. It can't diagnose anyone and doesn't replace your doctor. A TSH around 9 sits near the level where clinicians often discuss medication — so use this as support alongside professional care, not instead of it. If you take medication, are pregnant, or are unsure, check with a qualified healthcare professional before making changes.
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="https://harryarul.github.io/health/">
+      <img src="https://harryarul.github.io/health/assets/favicon.svg" alt="" />
+      The Whole You
+    </a>
+    <p>A calm, practical companion for whole-body health — one small habit at a time.</p>
+    <p style="margin-top:14px">© 2026 The Whole You · Educational information only, not medical advice. Always speak with a qualified clinician about your own health.</p>
+  </div>
+</footer>
+
+</body>
+</html>
