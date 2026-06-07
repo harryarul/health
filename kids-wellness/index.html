@@ -251,6 +251,50 @@
     .rhythm{grid-template-columns:repeat(2,1fr)}
     .track-grid{grid-template-columns:repeat(5,1fr)}
   }
+
+  /* ---------- AGE BANDS ---------- */
+  #ages{background:linear-gradient(180deg,#fff,#fffdf8);border-bottom:1px solid var(--line)}
+  .sci{background:var(--cream-2);border:1px solid var(--line);border-radius:16px;padding:18px 22px;margin-bottom:26px;box-shadow:var(--shadow-sm);font-weight:600;color:var(--ink-soft);font-size:.92rem}
+  .sci b{color:var(--ink)}
+  .age-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .agecard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow-sm);border-top:5px solid var(--a)}
+  .agecard .ahead{display:flex;align-items:center;gap:14px;margin-bottom:2px}
+  .agecard .abadge{font-family:'Fredoka';font-weight:700;font-size:1.7rem;color:var(--a);line-height:1}
+  .agecard .aname{font-family:'Fredoka';font-weight:600;font-size:1.15rem}
+  .agecard .aemoji{font-size:1.7rem;margin-left:auto}
+  .agecard .awhy{font-size:.85rem;font-style:italic;color:var(--ink-soft);font-weight:600;margin:10px 0 16px}
+  .agecard ul{list-style:none}
+  .agecard li{display:flex;gap:11px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem;align-items:flex-start}
+  .agecard li:last-child{border-bottom:none}
+  .agecard li .em{flex-shrink:0;font-size:1.15rem;line-height:1.4}
+  .agecard li b{font-weight:800}
+  .agecard .skill{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--a);display:block;margin-top:1px}
+  .age-cta{margin-top:14px;text-align:center}
+  .credit{font-size:.78rem;color:var(--ink-soft);font-weight:600;margin-top:20px;text-align:center;font-style:italic}
+  @media(max-width:860px){.age-grid{grid-template-columns:1fr}}
+
+  /* ---------- BENEFIT HIGHLIGHTS ---------- */
+  .benefits{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .ben{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 18px;text-align:center;box-shadow:var(--shadow-sm)}
+  .ben .bic{font-size:2rem}
+  .ben h4{font-size:1.02rem;margin:9px 0 5px}
+  .ben p{font-size:.83rem;color:var(--ink-soft);font-weight:600}
+
+  /* ---------- VIDEO CARDS ---------- */
+  .vcard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .vembed{position:relative;width:100%;padding-top:56.25%;background:#000}
+  .vembed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vmeta{display:flex;gap:12px;align-items:flex-start;padding:16px 18px}
+  .vmeta .vic{font-size:1.6rem;line-height:1.2;flex-shrink:0}
+  .vmeta h4{font-size:1.05rem;margin-bottom:3px}
+  .vmeta p{font-size:.84rem;color:var(--ink-soft);font-weight:600}
+
+  /* ---------- REFLECTION ---------- */
+  .reflect{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--social);border-radius:22px;padding:34px 30px;text-align:center;box-shadow:var(--shadow);max-width:620px;margin:0 auto}
+  .reflect .rq{font-family:'Fredoka';font-weight:500;font-size:1.45rem;color:var(--ink);min-height:3.2em;display:flex;align-items:center;justify-content:center;line-height:1.25}
+  .reflect .rhint{font-size:.86rem;color:var(--ink-soft);font-weight:600;margin:8px 0 18px}
+  @media(max-width:860px){.ben-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -291,6 +335,79 @@
     </div>
   </div>
 </header>
+
+<!-- ============ BENEFIT HIGHLIGHTS ============ -->
+<section class="benefits">
+  <div class="wrap">
+    <div class="ben-grid">
+      <div class="ben"><div class="bic">🎯</div><h4>Sharper focus</h4><p>Daily attention reps that carry over into schoolwork and homework.</p></div>
+      <div class="ben"><div class="bic">😌</div><h4>Calmer days</h4><p>Breathing and wind-downs that help ease big feelings and meltdowns.</p></div>
+      <div class="ben"><div class="bic">📵</div><h4>Screen balance</h4><p>Active, hands-on play that gives screen time some real competition.</p></div>
+      <div class="ben"><div class="bic">💞</div><h4>Stronger bond</h4><p>Most activities are done together — building connection along the way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAIN ACTIVATION BY AGE ============ -->
+<section id="ages">
+  <div class="wrap">
+    <p class="eyebrow">Brain activation by age</p>
+    <h2 class="stitle">Pick the right level for your child</h2>
+    <p class="sintro">A child's brain grows different "thinking muscles" at different ages. These quick-start menus give you playful, age-matched activities — and the full 14-day plan further down is the deep-dive track for ages 9 and up.</p>
+
+    <div class="sci"><b>The science, simply:</b> "Brain activation" really means strengthening <b>executive function</b> — three core mental skills: <b>attention</b> (focusing and tuning out distractions), <b>working memory</b> (holding information in mind), and <b>cognitive flexibility</b> (switching between rules and ideas). These grow fastest between ages 3 and 5, then keep developing right through the teens — and play, rhythm, movement and conversation build all three at once.</div>
+
+    <div class="age-grid">
+
+      <div class="agecard" style="--a:#3aa861">
+        <div class="ahead"><span class="abadge">3–4</span><span class="aname">Little Explorers</span><span class="aemoji">🧸</span></div>
+        <p class="awhy">A golden window — these skills grow faster now than at any other age. Keep everything short, playful, and side-by-side with a grown-up.</p>
+        <ul>
+          <li><span class="em">🎵</span><span>Freeze Dance — move to music, freeze when it stops.<span class="skill">Self-control &amp; listening</span></span></li>
+          <li><span class="em">🥤</span><span>Cup Hide — hide a toy under one of three cups, shuffle slowly, let them find it.<span class="skill">Working memory</span></span></li>
+          <li><span class="em">🟦</span><span>Sort &amp; Switch — sort toys by colour, then re-sort the same toys by shape.<span class="skill">Cognitive flexibility</span></span></li>
+          <li><span class="em">🦸</span><span>Pretend Play — act out simple roles like shopkeeper or doctor.<span class="skill">Planning &amp; self-regulation</span></span></li>
+        </ul>
+      </div>
+
+      <div class="agecard" style="--a:#f3a712">
+        <div class="ahead"><span class="abadge">5–6</span><span class="aname">Rising Stars</span><span class="aemoji">🌟</span></div>
+        <p class="awhy">Now kids can follow longer instructions and take turns. The social brain — waiting, sharing, negotiating — surges at this age.</p>
+        <ul>
+          <li><span class="em">🃏</span><span>Memory Match — flip cards to find pairs; start with 6–8 cards.<span class="skill">Working memory</span></span></li>
+          <li><span class="em">🛒</span><span>Market List — "I went to the market and bought…" add and repeat the growing list.<span class="skill">Recall &amp; focus</span></span></li>
+          <li><span class="em">🗺️</span><span>3-Clue Hunt — follow a simple three-step treasure hunt.<span class="skill">Holding a plan in mind</span></span></li>
+          <li><span class="em">🤸</span><span>Cross-Body Moves — touch right hand to left knee, then swap.<span class="skill">Coordination &amp; focus</span></span></li>
+        </ul>
+      </div>
+
+      <div class="agecard" style="--a:#1f9da6">
+        <div class="ahead"><span class="abadge">7–9</span><span class="aname">Brain Builders</span><span class="aemoji">🧩</span></div>
+        <p class="awhy">Children can now plan, check their own work, and play well with peers — so step back and let them lead more of the activity.</p>
+        <ul>
+          <li><span class="em">♟️</span><span>Strategy Games — Uno, Spot It, or beginner chess.<span class="skill">Strategy &amp; flexibility</span></span></li>
+          <li><span class="em">🔢</span><span>Number Chains — repeat back longer and longer number sequences.<span class="skill">Working memory</span></span></li>
+          <li><span class="em">⏱️</span><span>10-Minute Sprint — focus on one task, then say what you learned.<span class="skill">Sustained attention</span></span></li>
+          <li><span class="em">⚽</span><span>Track &amp; Pass — ball games that need watching a moving target and teamwork.<span class="skill">Flexibility &amp; coordination</span></span></li>
+        </ul>
+      </div>
+
+      <div class="agecard" style="--a:#ef6f6c">
+        <div class="ahead"><span class="abadge">9+</span><span class="aname">Big Thinkers</span><span class="aemoji">🚀</span></div>
+        <p class="awhy">Tweens can run their own routines, plan ahead, and teach others. Give real autonomy and bigger challenges — this is the home of the 14-day plan below.</p>
+        <ul>
+          <li><span class="em">🎯</span><span>Deep-Focus Sprints — 20–25 min study blocks, then teach it back to someone.<span class="skill">Metacognition</span></span></li>
+          <li><span class="em">♜</span><span>Strategy Boards — chess, Catan or similar planning games.<span class="skill">Planning &amp; inhibition</span></span></li>
+          <li><span class="em">🍳</span><span>Run a Project — plan and carry out a recipe or organise a game.<span class="skill">Planning &amp; sequencing</span></span></li>
+          <li><span class="em">🎵</span><span>Learn &amp; Perform — master a short piece of music and play it for someone.<span class="skill">Working memory &amp; control</span></span></li>
+        </ul>
+        <div class="age-cta"><a class="btn f" href="#plan">See the full 14-day plan ↓</a></div>
+      </div>
+
+    </div>
+    <p class="credit">Activities are original and adapted from well-established child-development guidance, including Harvard's Center on the Developing Child. Educational only — every child develops at their own pace.</p>
+  </div>
+</section>
 
 <!-- ============ DAILY RHYTHM ============ -->
 <section>
@@ -460,18 +577,50 @@
   </div>
 </section>
 
-<!-- ============ VIDEO SLOTS ============ -->
+<!-- ============ DAILY REFLECTION ============ -->
+<section id="reflect">
+  <div class="wrap">
+    <p class="eyebrow">Wind-down ritual</p>
+    <h2 class="stitle">Daily reflection</h2>
+    <p class="sintro">End each day with one question. Reflecting on the day helps lock in learning and builds self-awareness — say the answer out loud together or write it in a journal.</p>
+    <div class="reflect">
+      <div class="rq" id="reflectQ">What's one thing you focused on really well today?</div>
+      <p class="rhint">Say it out loud, or jot it in your journal — no wrong answers.</p>
+      <div class="btn-row"><button class="btn f" id="reflectBtn">🎲 New question</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO DEMOS ============ -->
 <section id="videos" style="background:var(--cream-2)">
   <div class="wrap">
-    <p class="eyebrow">Add your own clips</p>
-    <h2 class="stitle">Animated video slots</h2>
-    <p class="sintro">Drop demonstration videos here so kids can watch and copy. Replace each box with your hosted video or a YouTube embed — paste an <code>&lt;iframe&gt;</code> where the box sits.</p>
+    <p class="eyebrow">Watch &amp; copy</p>
+    <h2 class="stitle">Demonstration videos</h2>
+    <p class="sintro">Short, kid-friendly clips for each part of the routine. Watch together, then give it a try. You can swap any clip later by changing the video link in the embed.</p>
     <div class="vid-grid">
-      <div class="vslot"><div class="vic">🧠</div><h4>Breathing &amp; focus demo</h4><p>Show the box-breathing rhythm and a calm study setup.</p><code>replace with your &lt;iframe&gt;</code></div>
-      <div class="vslot" style="border-color:var(--sport)"><div class="vic">⚽</div><h4>Soccer footwork demo</h4><p>Toe-taps, juggling and the cone-dribble circuit.</p><code>replace with your &lt;iframe&gt;</code></div>
-      <div class="vslot" style="border-color:var(--music)"><div class="vic">🎵</div><h4>Rhythm &amp; clapping demo</h4><p>Clap-along patterns at 90 BPM and an easy song phrase.</p><code>replace with your &lt;iframe&gt;</code></div>
-      <div class="vslot" style="border-color:var(--social)"><div class="vic">🤝</div><h4>Social skills demo</h4><p>Friendly greetings, asking questions, active listening.</p><code>replace with your &lt;iframe&gt;</code></div>
+
+      <div class="vcard">
+        <div class="vembed"><iframe src="https://www.youtube.com/embed/SmLnUdUea5k?rel=0" title="Breathing exercise for kids" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <div class="vmeta"><span class="vic">🧠</span><div><h4>Breathing &amp; calm</h4><p>A guided breathing exercise to settle the body and sharpen focus.</p></div></div>
+      </div>
+
+      <div class="vcard">
+        <div class="vembed"><iframe src="https://www.youtube.com/embed/CosG13seo3o?rel=0" title="Soccer ball mastery drills for kids" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <div class="vmeta"><span class="vic">⚽</span><div><h4>Soccer footwork</h4><p>Beginner ball-mastery drills — toe-taps, rolls and close control.</p></div></div>
+      </div>
+
+      <div class="vcard">
+        <div class="vembed"><iframe src="https://www.youtube.com/embed/QZd_gIJxGbU?rel=0" title="Rhythm clapping game for kids" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <div class="vmeta"><span class="vic">🎵</span><div><h4>Rhythm &amp; clapping</h4><p>A copycat clap-back game that builds timing and listening.</p></div></div>
+      </div>
+
+      <div class="vcard">
+        <div class="vembed"><iframe src="https://www.youtube.com/embed/vRv7GAkfj4w?rel=0" title="Social skills for kids - being a good friend" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+        <div class="vmeta"><span class="vic">🤝</span><div><h4>Social skills</h4><p>Friendly habits — greeting, listening and being a good friend.</p></div></div>
+      </div>
+
     </div>
+    <p class="credit">These clips are third-party videos embedded from YouTube and belong to their creators, shared here for convenience. Please preview any video before watching with your child.</p>
   </div>
 </section>
 
@@ -701,6 +850,29 @@
     });
     grid.appendChild(cell);
   }
+})();
+/* ---------------- DAILY REFLECTION ---------------- */
+(function(){
+  const q=document.getElementById('reflectQ'), btn=document.getElementById('reflectBtn');
+  if(!q||!btn)return;
+  const prompts=[
+    "What's one thing you focused on really well today?",
+    "Who did you connect with today, and how did it feel?",
+    "What was the best part of moving your body today?",
+    "What rhythm, beat or song got stuck in your head?",
+    "What's one thing you're proud of right now?",
+    "What felt tricky today — and what might help next time?",
+    "What made you smile today?",
+    "What's one kind thing you did for someone?",
+    "What's something new you tried today?",
+    "If today was a colour, which one would it be, and why?"
+  ];
+  let last=0;
+  btn.addEventListener('click',function(){
+    let i; do{ i=Math.floor(Math.random()*prompts.length);}while(i===last&&prompts.length>1);
+    last=i; q.style.opacity=0;
+    setTimeout(()=>{q.textContent=prompts[i];q.style.transition='opacity .25s';q.style.opacity=1;},150);
+  });
 })();
 </script>
 </body>
