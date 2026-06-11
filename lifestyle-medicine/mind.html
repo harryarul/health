@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mind &amp; Breath — Lifestyle as Medicine</title>
+<meta name="description" content="Meditation, box breathing and 4-7-8 breathing, and the heart benefits of optimism — with an interactive breathing guide.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back" href="index.html">&larr; Lifestyle as Medicine</a>
+  <span class="crumb">Mind &amp; Breath</span>
+</div>
+
+<header class="hero wrap">
+  <p class="eyebrow">Calm</p>
+  <h1>Calm is a <span class="accent">cardiac</span> intervention.</h1>
+  <p class="lede">Stress isn't just unpleasant — it raises blood pressure, stirs inflammation, and wears on the heart. The good news: the antidote is free, portable, and starts working within a few breaths.</p>
+</header>
+
+<main class="wrap">
+
+  <section class="block" style="border-top:none">
+    <h2><span class="num">TRY IT NOW</span>One round of box breathing</h2>
+    <p class="section-lede">Box breathing — inhale 4, hold 4, exhale 4, hold 4 — helps regulate the nervous system and can lower blood pressure. Follow the circle.</p>
+    <div class="breathe" id="bx">
+      <div class="orb" id="orb">Ready</div>
+      <p class="phase" id="phase">Press start, then breathe with the circle.</p>
+      <button id="btn">Start</button>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">TECHNIQUE</span>Two breaths worth learning</h2>
+    <div class="feature">
+      <div class="item"><div class="ico">▢</div><h3>Box breathing (4-4-4-4)</h3><p>Inhale 4s, hold 4s, exhale 4s, hold 4s. Steadies the autonomic nervous system and can ease blood pressure. Great for focus and acute stress.</p></div>
+      <div class="item"><div class="ico">◖</div><h3>4-7-8 breathing</h3><p>Inhale 4s, hold 7s, exhale 8s. The long exhale is especially good for winding down anxiety and easing into sleep.</p></div>
+    </div>
+    <p>Practised regularly, these improve heart-rate variability, lower cortisol, and sharpen day-to-day stress management — and they stack neatly on top of a heart-healthy diet and movement.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">MEDITATION</span>Why stillness reaches the heart</h2>
+    <p class="section-lede">Raj yoga and mindfulness meditation both shift the nervous system from "fight or flight" toward "rest and repair." That single change ripples outward:</p>
+    <ul class="check">
+      <li>Lower blood pressure — up to a 14&nbsp;mmHg systolic drop reported in cardiac patients practising mindfulness</li>
+      <li>Slower, steadier heart rate and better heart-rate variability</li>
+      <li>Reduced anxiety and lower cortisol — both heart-disease risk factors</li>
+      <li>Better sleep, which quietly protects the cardiovascular system</li>
+    </ul>
+    <p>You don't need rituals or special equipment — just a few quiet minutes a day, returning your attention to the breath or a calm, positive thought.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">OUTLOOK</span>Optimism is protective</h2>
+    <p class="section-lede">Positive emotional well-being tracks with real cardiovascular benefit: people higher in optimism and "emotional vitality" have shown a <strong>20–30% lower risk</strong> of coronary heart disease over time — via lower blood pressure, less inflammation, and healthier habits overall.</p>
+    <p class="pull">Gratitude, mindfulness, and staying connected to other people are heart medicine too.</p>
+    <div class="support">
+      A gentle note: breathing and meditation are wonderful complements to care for anxiety, low mood, or chronic stress — but they're complements, not replacements. If you're struggling, please reach out to a GP, counsellor, or someone you trust. Support helps, and asking for it is a strength.
+    </div>
+  </section>
+
+  <p class="sources"><b>Sources referenced:</b> PMC and journal studies on Raj yoga and mindfulness meditation in cardiovascular care; Harvard Health on meditation and heart benefits; NHS, Healthline and Medical News Today on breathing techniques; PMC reviews on emotional well-being and coronary risk; American Heart Association and World Heart Federation on mental well-being. Compiled for The Whole You as general education.</p>
+
+  <div class="pager">
+    <a href="food.html"><span class="dir">&larr; Previous</span><div class="ttl">Food as Medicine</div></a>
+    <a href="informed-patient.html"><span class="dir">Next &rarr;</span><div class="ttl">The Informed Patient</div></a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font-family:'Bricolage Grotesque';font-size:1.3rem;color:#fff;margin:0 0 .4rem">The Whole You</p>
+    <p>Back to the <a href="../">health hub</a> &middot; <a href="index.html">Lifestyle as Medicine</a></p>
+    <p class="small">Educational content only — not a substitute for personalised medical advice.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('btn'),orb=document.getElementById('orb'),
+      phase=document.getElementById('phase'),box=document.getElementById('bx');
+  var steps=[['Breathe in','scale(1.15)'],['Hold','scale(1.15)'],['Breathe out','scale(.7)'],['Hold','scale(.7)']];
+  var i=0,timer=null,running=false;
+  function step(){
+    var s=steps[i];
+    phase.textContent=s[0]+' \u2014 4s';
+    orb.textContent=s[0];
+    orb.style.transition='transform 4s ease-in-out';
+    orb.style.transform=s[1];
+    i=(i+1)%4;
+  }
+  function start(){
+    running=true;btn.textContent='Stop';box.classList.remove('run');
+    i=0;step();timer=setInterval(step,4000);
+  }
+  function stop(){
+    running=false;btn.textContent='Start';clearInterval(timer);
+    orb.textContent='Ready';orb.style.transform='scale(1)';
+    phase.textContent='Nice work. Start again whenever you like.';
+  }
+  btn.addEventListener('click',function(){running?stop():start();});
+})();
+</script>
+
+</body>
+</html>
